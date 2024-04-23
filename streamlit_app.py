@@ -50,9 +50,9 @@ def generate_response(file, openai_api_key, query):
     return retrieval_chain.run(query)
 
 st.set_page_config(
-    page_title="Clara que no sabes del pdf"
+    page_title="Clara pregunta al pdf"
 )
-st.title("Clara que no sabes del pdf")
+st.title("Clara pregunta al pdf")
 
 uploaded_file = st.file_uploader(
     "Upload a .pdf document",
@@ -60,7 +60,7 @@ uploaded_file = st.file_uploader(
 )
 
 query_text = st.text_input(
-    "Que no sabes Claris:",
+    "Enter your question:",
     placeholder="Write your question here",
     disabled=not uploaded_file
 )
